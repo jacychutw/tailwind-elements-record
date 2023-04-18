@@ -5,6 +5,7 @@
 
 
 📝 &nbsp; 專案教學文件：
+[Tailwind CSS — Tailwind Elements](https://jacychu.medium.com/tailwind-css-tailwind-elements-33abf469aaa4)
 
 🚀 &nbsp; 快速開始：<br>
 - 安裝相依套件
