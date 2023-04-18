@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tailwindcss-record</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- content -->
+  <div class="flex">
+    <div class="flex-none w-20 h-screen bg-primary-300 dark:bg-nightrider block md:w-60">
+
+      <nav class="text-right">
+        <div>
+          <h1
+            class="uppercase p-6 border-b-2 text-white font-bold border-b-white dark:border-b-nightgrey dark:text-white md:hidden">
+            <span><img src="../dist/img/sport.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+          </h1>
+          <h1
+            class="uppercase p-6 border-b-2 text-white font-bold border-b-white dark:border-b-nightgrey dark:text-white hidden md:block">
+            <span><img src="../dist/img/sport.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+            運動紀錄表
+          </h1>
+        </div>
+        <ul class="text-sm text-gray-500 dark:text-nightgrey mt-1" id="menu">
+          <li class="pt-4">
+            <span
+              class="w-auto px-6 py-2 cursor-pointer hover:bg-white hover:dark:bg-eclipse hover:bg-opacity-25 block md:hidden">
+              <span><img src="../dist/img/home.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+            </span>
+            <span
+              class="w-auto px-6 py-2 cursor-pointer hover:bg-white hover:dark:bg-eclipse hover:bg-opacity-25 hidden md:block">
+              <span><img src="../dist/img/home.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+              Home
+            </span>
+          </li>
+          <li class="pt-4">
+            <span
+              class="w-auto px-6 py-2 cursor-pointer hover:bg-white hover:dark:bg-eclipse hover:bg-opacity-25 block md:hidden">
+              <span><img src="../dist/img/about.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+            </span>
+            <span
+              class="w-auto px-6 py-2 cursor-pointer hover:bg-white hover:dark:bg-eclipse hover:bg-opacity-25 hidden md:block">
+              <span><img src="../dist/img/about.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+              About
+            </span>
+          </li>
+          <li class="pt-4">
+            <span class="w-auto px-6 py-2 bg-white dark:bg-donjuan dark:text-white cursor-pointer block md:hidden">
+              <span><img src="../dist/img/record.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+            </span>
+            <span class="w-auto px-4 py-2 bg-white dark:bg-donjuan dark:text-white cursor-pointer hidden md:block">
+              <span><img src="../dist/img/record.png" alt="sun" class="h-6 sm:h-6 inline-block"></span>
+              Record
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="grow container mx-auto px-16 py-12 text-gray-600 dark:text-white">
+
+      <div class="flex flex-wrap">
+        <!-- datepicker -->
+        <div class="w-96 relative mb-3 md:w-60 lg:w-36" style="margin: 10px">
+          <div data-te-format="yyyy/mm/dd" data-te-datepicker-init data-te-input-wrapper-init data-te-datepicker-init data-te-input-wrapper-init data-te-class-datepicker-header="xs:max-md:landscape:h-full h-[120px] px-6 bg-primary-500 flex flex-col rounded-t-lg dark:bg-zinc-800">
+            <input type="text"
+              id="pickDate"
+              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              placeholder="日期" />
+            <label for="floatingInput"
+              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">日期
+            </label>
+          </div>
+        </div>
+        <!-- multi select -->
+        <div class="w-96 mb-3 md:w-60 lg:w-36" style="margin: 10px">
+          <div>
+            <select id="pickSport" data-te-select-init multiple data-te-class-form-check-input="relative float-left mt-[3px] mr-2 h-4 w-4 cursor-pointer appearance-none rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 motion-reduce:transition-none checked:border-primary-500 checked:bg-primary-500 checked:after:absolute checked:after:ml-[5px] checked:after:mt-px checked:after:block checked:after:h-[9px] checked:after:w-[5px] checked:after:rotate-45 checked:after:border-2 checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] focus:outline-none group-data-[te-select-option-text-ref]:mr-2.5 dark:bg-zinc-700 dark:checked:bg-primary-500">
+              <option value="游泳">游泳</option>
+              <option value="慢跑">慢跑</option>
+              <option value="瑜珈">瑜珈</option>
+            </select>
+            <label data-te-select-label-ref>項目</label>
+          </div>
+        </div>
+        <!-- single select -->
+        <div class="w-96 mb-3 md:w-60 lg:w-36" style="margin: 10px">
+          <div>
+            <select id="timeLength" data-te-select-init data-te-select-placeholder="時間長度">
+              <!-- <div><option value=""></option></div> -->
+              <option value="30min">30min</option>
+              <option value="1hr">1hr</option>
+            </select>
+            <label data-te-select-label-ref>時間長度</label>
+          </div>
+        </div>
+        <!-- input -->
+        <div class="w-96 relative mb-3 md:w-60 lg:w-36" style="margin: 10px">
+          <div data-te-input-wrapper-init>
+            <input type="text"
+              id="other"
+              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              id="exampleFormControlInput1" placeholder="其他" />
+            <label for="exampleFormControlInput1"
+              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+              其他
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button"
+          onclick="submit()"
+          class="m-2.5 inline-block rounded bg-primary-300 px-6 my-4 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-400 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-400 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+          送出
+        </button>
+      </div>
+
+      <!-- data table -->
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full text-center text-sm font-light">
+                <thead class="border-b font-medium dark:border-neutral-500">
+                  <tr>
+                    <th scope="col" class="px-6 py-2">日期</th>
+                    <th scope="col" class="px-6 py-2">項目</th>
+                    <th scope="col" class="px-6 py-2">時間長度</th>
+                    <th scope="col" class="px-6 py-2">其他</th>
+                  </tr>
+                </thead>
+                <tbody id="sportTable">
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-2">2023/03/23</td>
+                    <td class="whitespace-nowrap px-6 py-2">游泳</td>
+                    <td class="whitespace-nowrap px-6 py-2">1hr</td>
+                    <td class="whitespace-nowrap px-6 py-2">-</td>
+                  </tr>
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-2">2023/04/16</td>
+                    <td class="whitespace-nowrap px-6 py-2 ">跑步</td>
+                    <td class="whitespace-nowrap px-6 py-2">30min</td>
+                    <td class="whitespace-nowrap px-6 py-2">-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script>
+    function submit() {
+      let submitArr = [];
+      const timeSelect = document.querySelector("#pickDate");
+      submitArr.push(timeSelect.value)
+
+      const sportSelect = document.querySelector("#pickSport");
+      const sportSelectInstance = te.Select.getInstance(sportSelect);
+      submitArr.push(sportSelectInstance.value)
+
+      const timeLengthSelect = document.querySelector("#timeLength");
+      submitArr.push(timeLengthSelect. value)
+
+      const otherInput = document.querySelector("#other");
+      submitArr.push(otherInput.value)
+
+      console.log('----')
+      console.log(submitArr)
+      console.log('----')
+
+      document.getElementById("sportTable").innerHTML +=
+      '<tr class="border-b dark:border-neutral-500" ><td class="whitespace-nowrap px-6 py-2">'+ submitArr[0] +'</td><td class="whitespace-nowrap px-6 py-2 ">'+ submitArr[1] +'</td><td class="whitespace-nowrap px-6 py-2">' + submitArr[2] +'</td><td class="whitespace-nowrap px-6 py-2">' + submitArr[3] +'</td></tr >';
+    }
+  </script>
+</body>
+
+</html>

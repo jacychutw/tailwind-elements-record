@@ -1,0 +1,15 @@
+{
+  "name": "tailwindcss-record",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/input.css -o dist/output.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.1",
+    "tw-elements": "^1.0.0-beta2"
+  }
+}
